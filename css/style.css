@@ -103,6 +103,7 @@ img{
 }
 #home .page-title{
   text-transform: none;
+  white-space: nowrap;
 }
 .page-subtitle{
   padding: 0px 0 42px;
