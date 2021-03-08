@@ -135,8 +135,8 @@ aside{
   order: 1;
 }
 .news-contents{
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
   margin-bottom: 50px;
 }
 .post-info{
