@@ -1,0 +1,502 @@
+@charset "UTF-8";
+/* 共通部分
+--------------------------------------*/
+html{
+  font-size: 100% ;
+}
+body{
+  font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7 ;
+  color:#432;
+}
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+}
+/*HEADER
+-------------------------------------- */
+
+.logo{
+  width: 280px;
+  margin-top: 25px;
+}
+.main-nav{
+  display: flex;
+  font-size: 1.25;
+  text-transform: uppercase; /*すべての文字を大文字に変換*/
+  margin-top: 34px;
+  list-style: none;
+}
+.main-nav li{
+  margin-left: 36px;
+  /* border: 2px black solid;
+  border-radius: 5px;
+  padding: 5px; */
+}
+.main-nav a{
+  color: #432;
+}
+.main-nav a:hover{
+  color:#0e6227;   /*カーソル上の時色変化*/
+}
+.wrapper{
+  max-width: 1100px;/*最大幅指定*/
+  margin: 0 auto;/*中央に配置*/
+  padding: 0 4%;
+}
+.page-header{
+  display: flex;
+  justify-content: space-between;/*justify-contentは水平方向の揃え p155*/
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 20px;
+  border-radius: 4px;
+}
+
+
+/*HOME
+----------------------------------------*/
+.home-content{
+  text-align: left;
+  margin: 10% 15% 15%
+}
+.home-content p{
+  font-size: 1.35rem;
+  margin: -5px 0px 69px
+
+}
+
+/*見出し*/
+.page-title{
+  font-size: 5rem;
+  font-family: "Philosopher", serif;
+  text-transform: uppercase;
+  font-weight: normal;/*文字の太さ*/
+}
+/*ボタン*/
+.botton{
+  font-size: 1.375rem;
+  background: Mediumseagreen;
+  color:#fff;
+  border-radius: 5px;/*角を丸くする*/
+  padding:18px 32px
+}
+.botton:hover{
+  background: #499149;
+}
+/*大きな背景画像*/
+.big-bg{
+  background-size: auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+#home{
+  background-image: url(../images/golf-swing.jpg);
+  min-height: 150vh;
+  background-size: cover;
+}
+#home .pagetitle{
+  text-transform: none;
+}
+
+
+#news{
+  background-image: url(../images/news-bg.jpg);
+  height:270px;
+  margin-bottom: 40px;
+  background-position: center;
+}
+#news .page-title{
+  text-align: center;
+}
+.temporary-sign{
+  display: block;
+  text-align: center;
+}
+footer{
+  background: #432;
+  text-align: center;
+  padding: 26px 0;
+}
+footer p{
+  color:#fff;
+  font-size: 0.875rem;
+}
+article{
+  width: 60%;
+  order: 2;
+}
+aside{
+  width: 22%;
+  order: 3;
+}
+.ad{
+  order: 1;
+}
+.news-contents{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.post-info{
+  position: relative;
+  padding-top: 4px;
+  margin-bottom: 40px;
+}
+.post-date{
+  background: #0bd;
+  border-radius: 50%;
+  color:#fff;
+  width:100px;
+  height:100px;
+  text-align: center;
+  font-size: 1.625rem;
+  position: absolute;
+  top: 0;
+  padding-top: 10px;
+}
+.post-date span{
+  font-size: 1rem;
+  border-top: 1px rgba(255, 255, 255, 0.5) solid;
+  padding-top: 6px;
+  padding-left: 0.75rem; /*なぜか合わないので自分で追加。ずれるかも。*/
+  display: flex;
+  width: 60%;
+  margin:0 auto;
+}
+.post-title{
+  font-family: "Yu Mincho","Yumincho",serif;
+  font-size: 2rem;
+  font-weight: normal
+}
+.post-title,
+.post-cat{
+  margin-left: 120px;
+}
+article img{
+  margin-bottom:20px;
+}
+article p{
+  margin-bottom: 1rem;
+}
+.sub-title{
+  font-size: 1.375rem;
+  padding: 0 8px 8px;
+  border-bottom: 2px #0bd solid;
+  font-weight: normal;
+}
+aside p{
+  padding: 12px 10px;
+}
+.sub-menu{
+  margin-bottom: 60px;
+  list-style: none;
+}
+.sub-menu li{
+  border-bottom: 1px #ddd solid;
+}
+.sub-menu a{
+  color: #432;
+  padding: 10px;
+  display: block;
+}
+.sub-menu a:hover{
+  color:#0bd;
+}
+/* 店舗情報、地図 */
+#location{
+  padding: 4% 0;
+}
+#location .wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+.location-info{
+  width: 25%;
+}
+.location-info p{
+  padding: 12px 10px;
+}
+.location-map{
+  width: 72%;
+}
+/* iframe */
+iframe{
+  width: 100%;
+}
+
+/* MENU
+----------------------------------------*/
+#menu {
+    background-image: url(../images/sinkan.jpg);
+    height: 707px;
+    background-size: cover;
+    margin-bottom: 40px;
+    background-position-y: -160px
+}
+.menu-content{
+  max-width: 560px;
+  margin-top: 10%;
+}
+.menu-content .page-title{
+  text-align: center;
+}
+.menu-title{
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Philosopher", serif;
+  font-weight: bold;
+  margin: 60px 10px 30px;
+  border-bottom: 2px mediumseagreen solid;
+}
+.menu-content p{
+  font-size: 1.125rem;
+  margin: 10px 0 0;
+  text-align: center;
+}
+.menu-top{
+  display:;
+  justify-content: space-between;
+}
+/* .contents{
+  width: 30%;
+} */
+.from-and-twitter{
+  /* display: flex; */
+  justify-content: center;
+}
+/* .from-and-twitter .gogle-form{
+  width: 60%;
+} */
+.contents h3{
+  text-align: left;
+}
+.contents a{
+  color: blue;
+}
+.contents a:hover{
+  color: #0c4da2;
+}
+.twitter-timeline{
+  width:100vw;
+  text-align:center;
+}
+/* .menu-info{
+  text-align:center;
+
+} */
+.timeline-wrapper{
+  text-align: center;
+  /* width: 40%; */
+}
+
+.grid{
+  display: grid;
+  grid-gap: 26px;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.big-box{
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.big-box img{
+  height: 92%;
+  width: 100%;
+  object-fit: cover;
+}
+/* SNS */
+#sns{
+  background: #FAF7F0;
+  padding: 4% 0;
+}
+#sns .wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+#sns .subtitle{
+  margin-bottom: 30px;
+}
+.sns-box{
+  width: 30%;
+}
+
+
+/* CONTACT
+---------------------------------------------- */
+#contact{
+  background-image: url(../images/contact-bg.jpg);
+  min-height: 130vh;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+  background: rgba(255,255,255,0.5);
+  border: 1px #fff solid;
+  border-radius: 5px;
+  padding:10px;
+  font-size: 1rem;
+}
+input[type="text"],
+input[type="email"]{
+  width: 100%;
+  max-width: 240px;
+}
+textarea{
+  width: 100%;
+  max-width: 480px;
+  height: 6rem;
+}
+input[type="submit"]{
+  border: none;
+  cursor:pointer;
+  line-height: 1;
+}
+
+/* モバイル版 */
+@media(max-width: 600px) {
+  .wrapper{
+    max-width: 85%;/*最大幅指定*/
+    margin: 0 auto;/*中央に配置*/
+    padding: 0 4%;
+  }
+  .page-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  #menu{
+    margin-bottom: -180px;
+  }
+  #menu .page-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgb(255,255,255,.5);
+    border-radius: 2px;
+  }
+  #menu p{
+    background-color: rgb(255,255,255,.8);
+    border-radius: 2px;
+  }
+  #home{
+    background-size:  auto;
+    background-position:23% 52%;
+    background-repeat: no-repeat;
+  }
+  .home-content p{
+    font-size: 1rem;
+    margin: 50px 0px 69px;
+  }
+  .botton {
+    font-size: 1.0rem;
+    background: Mediumseagreen;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 7px;
+  }
+  /* HEADER */
+  .main-nav{
+    font-size: 0.9rem;
+    margin-top:10px;
+  }
+  .main-nav li{
+    margin: 0 20px;
+    width: 30%;
+    white-space: nowrap;
+    margin-bottom: 10px;
+  }
+  /* HOME */
+  .home-content{
+    margin-top: 20%;
+  }
+  .page-header{
+    flex-direction: column;
+    align-items: center;
+  }
+  /* NEWS */
+  .news-contents{
+    flex-direction: column;
+  }
+  article,
+  aside{
+    width: 100%;
+  }
+  #news .page-title{
+    margin-top:30px;
+  }
+  aside{
+    margin-top: 60px;
+  }
+  .post-info{
+    margin-bottom: 30px;
+  }
+  .post-date{
+    width: 70px;
+    height: 70px;
+    font-size: 1rem;
+  }
+  .post-date span{
+    font-size: 0.875rem;
+    padding-top: 2px;
+    padding-left: 0.35rem; /*なぜか合わないので自分で追加。ずれるかも。*/
+
+  }
+  .post-title{
+    font-size: 1.375rem
+  }
+  .post-cat{
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+  .post-title,
+  .post-cat{
+    margin-left: 80px;
+  }
+  /* MENU */
+  .menu-title{
+    font-size: 1.5rem;
+  }
+  .menu-content{
+    margin-top: 20%;
+  }
+  .present-information p{
+    font-size: 0.8rem;
+  }
+
+  .big-box{
+    grid-column: auto;
+    grid-row: auto;
+    margin-bottom: 30px;/* 調整 */
+  }
+  .big-box img{
+    height: 100%
+  }
+  /* CONTACT */
+  #contact .pagetitle{
+    margin-top: 40px;
+  }
+  /* フォーム */
+  input[type="text"],
+  input[type="email"],
+  textarea{
+    max-width: 100%;
+  }
+  .google-form{
+    width: 100%;
+  }
+  #location .wrapper,
+  #sns .wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  .location-info,
+  .location-map,
+  .sns-box{
+    width: 100%;
+  }
+  .sns-box{
+    margin-bottom: 30px;
+  }
+
+}
