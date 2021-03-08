@@ -38,7 +38,7 @@ img{
 .main-nav a{
   color: #432;
 }
-.main-nav a:hover{
+.main-nav li:hover{
   color:#0e6227;   /*カーソル上の時色変化*/
 }
 .wrapper{
