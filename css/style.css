@@ -116,6 +116,14 @@ img{
   text-align: center;
   padding-top: 9%;
 }
+.match-info{
+  margin: 60px 0 0;
+}
+.club-info{
+  background-color:rgb(50,205,50,0.2);
+  padding: 20px;
+  border-radius: 4px;
+}
 .temporary-sign{
   display: block;
   text-align: center;
