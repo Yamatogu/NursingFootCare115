@@ -58,6 +58,107 @@ img{
     width: 100%;
 }
 
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  
+/* メニューのデザイン*/
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #d6faf8;
+  transition: .4s;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  left: 0;/* メニューを画面に入れる */
+}
+
+
+/* デフォルトでスマホ用を非表示にしておく */
+.nav{
+  display: none;
+}
+
+/* PC用ナビ（幅768px以上で表示） */
+.header_right {
+  display: block;
+}
+
+/* 幅768px以下の画面で切り替える */
+@media screen and (max-width: 800px) {
+  .header_right {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+  }
+}
+
 
 /*HOME
 ----------------------------------------*/
@@ -394,7 +495,7 @@ input[type="submit"]{
 } */
 
 /* モバイル版 */
-@media(max-width: 600px) {
+@media(max-width: 800px) {
   .wrapper{
     max-width: 85%;/*最大幅指定*/
     margin: 0 auto;/*中央に配置*/
@@ -423,11 +524,10 @@ input[type="submit"]{
   }
   #home{
     background-size:  auto;
-    background-position:23% 52%;
     background-repeat: no-repeat;
   }
   #home .page-title{
-    font-size: 2rem;
+    font-size: 3rem;
   }
   #home .page-subtitle{
     font-size: 1rem;
@@ -461,10 +561,10 @@ input[type="submit"]{
   /* HOME */
   .home-content{
     /* margin-top: 20%; */
-    padding-top: 55%;
+    padding-top: 100px;
   }
   .page-header{
-    flex-direction: column;
+    
     align-items: center;
   }
   /* NEWS */
