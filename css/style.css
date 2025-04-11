@@ -97,7 +97,7 @@ img{
   background-repeat: no-repeat;
 }
 #home{
-  background-image: url(../images/golf-swing.jpg);
+  background-image: url(../images/background.jpg);
   min-height: 150vh;
   background-size: cover;
 }
