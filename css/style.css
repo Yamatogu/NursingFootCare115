@@ -19,7 +19,7 @@ img{
 -------------------------------------- */
 
 .logo{
-  width: 280px;
+  width: 100px;
   margin-top: 25px;
 }
 .main-nav{
@@ -51,7 +51,7 @@ img{
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0);
     padding-bottom: 20px;
     position: fixed;
     top: 0;
@@ -62,7 +62,7 @@ img{
 /*HOME
 ----------------------------------------*/
 .home-content{
-  text-align: left;
+  text-align: center;
   margin: 0 15% 15%;
   padding-top: 15%;
 }
