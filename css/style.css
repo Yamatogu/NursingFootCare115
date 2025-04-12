@@ -228,12 +228,60 @@ img{
   flex-direction: column;
   text-align: center;
   margin-top: -40px;
-
-
-
 }
-/* ruby{
-  ruby-position:under;
+.line-on-image {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.line-on-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.line-on-image .line-button {
+  position: absolute;
+  top: 13.5%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  background: Mediumseagreen;
+  color: #fff;
+  border-radius: 0.8vw;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+  box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.2);
+  z-index: 10;
+  padding:10px 20px;
+  font-size: 120%;
+  
+}
+
+.line-on-image .line-button:hover {
+  background: #499149;
+}
+
+
+
+
+
+
+/* .photo_embed p{
+  position: absolute;絶対配置
+  color: white;文字は白に
+  top: 13.5%;
+  left: 42%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  font-size: 100%;
+  background: Mediumseagreen;
+  color:#fff;
+  border-radius: 5px;角を丸くする
+  padding:10px 20px;
+  display: inline-block;
 } */
 
 
@@ -262,7 +310,7 @@ img{
 footer{
   background: #93C8AF;
   text-align: center;
-  padding: 26px 0;
+  padding: 10px 0;
 }
 footer p{
   color:#fff;
@@ -569,6 +617,12 @@ input[type="submit"]{
     border-radius: 5px;
     padding: 10px 7px;
     display: inline-block;
+  }
+
+  .line-on-image .line-button {
+
+    font-size: 2vw;              /* ✅ 画面幅に対して可変に */
+    padding: 1.5vw 3vw;          /* ✅ 同様に相対指定 */
   }
   /* HEADER */
   .main-nav{
