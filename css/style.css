@@ -187,7 +187,7 @@ img{
 .container{
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 3%;
 }
 .line_botton {
   text-align: center;
@@ -515,7 +515,7 @@ input[type="submit"]{
 /* モバイル版 */
 @media(max-width: 800px) {
   .wrapper{
-    max-width: 85%;/*最大幅指定*/
+    max-width: 95%;/*最大幅指定*/
     margin: 0 auto;/*中央に配置*/
     padding: 0 4%;
   }
