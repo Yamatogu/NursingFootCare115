@@ -432,7 +432,7 @@ margin: 6px auto 18px;
   background: linear-gradient(to right, #28A44A 0%,#1DD125 50%,#11FF00 100%);
   content: '';
   display: block;
-  height: 1.3px;
+  height: 1px;
   width: 0;
   transform: translateX(-50%);
   transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
