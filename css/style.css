@@ -136,7 +136,7 @@ img{
   list-style: none;
   margin-left: 30px;
   margin-top: 100px;
-  line-height: 4rem
+  line-height: 3.5rem
   
 }
 
@@ -159,7 +159,9 @@ img{
     border-radius: 10px;/*角を丸くする*/
     padding: 1px 8px;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 12px;
+    margin-left: -3px;
+    letter-spacing: 0.06em;
 
 }
 /* 幅768px以下の画面で切り替える */
@@ -204,7 +206,8 @@ img{
 .page-subtitle {
   font-size: clamp(1.6rem, 2.5vw, 2rem);
   text-align: center; 
-  padding: 6% 3% 2%;
+  padding: 8% 3% 1%;
+  line-height: 2.1rem;
 }
 
 .title-sentence{
@@ -337,7 +340,7 @@ font-size: 1rem;
 list-style-type: disc;
 padding-left: 1.5em; 
 line-height: 1.8; color:#333;
-margin: 18px auto ;
+margin: 6px auto 18px;
 /* width: 400px; */
 }
 .treatment-list li{
@@ -449,12 +452,12 @@ footer p{
     background: Mediumseagreen;
     color: #fff !important; 
     border-radius: 5px;
-    padding: 10px 7px;
+    padding: 10px 20px;
     display: inline-block;
   }
 
   .line-on-image .line-button {
-    top: 15%;
+    top: 15.5%;
     left: 40%;
     font-size: 3vw;              /* ✅ 画面幅に対して可変に */
     padding: 1.5vw 3vw;          /* ✅ 同様に相対指定 */
