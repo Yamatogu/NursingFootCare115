@@ -75,6 +75,7 @@ img{
   position: relative;
   z-index: 100;/* 重なり順を一番上にする */
   cursor: pointer;
+  margin: 10px 0 0;
 }
 
 /* ハンバーガーメニューのアイコン */
@@ -186,16 +187,19 @@ img{
 }
 
 /*見出し(AboutUs)*/
-.page-title{
-  font-size: 5rem;
+.page-aboutus{
   font-family: "Philosopher", serif;
-  text-transform: uppercase;
-  font-weight: normal;/*文字の太さ*/
+  /* text-transform: uppercase; */
+  
 }
 .page-subtitle {
   font-size: clamp(1.2rem, 2.5vw, 2rem);
   text-align: center; 
   padding: 6% 3% 2%;
+}
+.title-sentence{
+  font-family: serif;
+  text-align: center;
 }
 .container{
   display: flex;
