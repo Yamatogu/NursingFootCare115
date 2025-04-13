@@ -151,15 +151,15 @@ img{
 .nav_list a{
   color: #174630;
   font-size: 1.3rem;
+  font-weight: bold;
 }
 .header-line{
     /* font-size: 2rem; */
     background: Mediumseagreen;
     color:#fff !important;
     border-radius: 10px;/*角を丸くする*/
-    padding: 1px 8px;
+    padding: 7px 15px;
     display: inline-block;
-    margin-top: 12px;
     margin-left: -3px;
     letter-spacing: 0.06em;
 
@@ -172,6 +172,18 @@ img{
   .nav {
     display: block;
   }
+  .header-line{
+    /* font-size: 2rem; */
+    background: Mediumseagreen;
+    color:#fff !important;
+    border-radius: 10px;/*角を丸くする*/
+    padding: 1px 8px;
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: -3px;
+    letter-spacing: 0.06em;
+
+}
 }
 /* ハンガーガ－メニューの設定終わり */
 
