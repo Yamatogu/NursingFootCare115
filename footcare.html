@@ -156,13 +156,24 @@
         <p><small>&copy; 2025 Footomo</small></p>
       </div>
     </footer>
-    <script>
+    <!-- <script>
       document.addEventListener('DOMContentLoaded', () => {
         const line = document.querySelector('.line');
         if (line) {
           line.classList.add('is-animated');
         }
       });
+    </script> -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          const line = document.querySelector('.line');
+          if (line) {
+            line.classList.add('is-animated');
+          }
+        }, 100); // 100ms待ってから実行
+      });
     </script>
+    
   </body>
 </html>
