@@ -353,7 +353,7 @@ padding-top: 10vw;
 @keyframes fadeup {
   0% {
     transform: translateY(30px);
-    opacity: 1;
+    opacity: 0;
   }
   80% {
     opacity: 1;
