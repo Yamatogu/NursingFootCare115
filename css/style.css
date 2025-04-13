@@ -150,15 +150,16 @@ img{
 }
 .nav_list a{
   color: #174630;
+  font-size: 1.3rem;
 }
 .header-line{
     /* font-size: 2rem; */
     background: Mediumseagreen;
     color:#fff !important;
     border-radius: 10px;/*角を丸くする*/
-    padding: 6px 8px;
+    padding: 1px 8px;
     display: inline-block;
-    
+    margin-top: 10px;
 
 }
 /* 幅768px以下の画面で切り替える */
