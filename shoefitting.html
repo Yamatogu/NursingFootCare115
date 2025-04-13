@@ -15,6 +15,7 @@
       <link rel="icon" type="image/png" href="images/favicon.png">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta property:"og:description" content="Footomoの公式HPです。">
+      <meta property:="og:image" content="images/favicon_original.png">
 
   </head>
 <!-- Google tag (gtag.js) -->
@@ -72,6 +73,7 @@
         
 
   <h1 class="page-title">シューフィッティング</h1>
+  <div class="line anim"></div>
   <section>
     <h2 class="page-subtitle">
       <span>足に合った靴が</span><span>「歩く力」を支える</span>
@@ -136,5 +138,13 @@
         <p><small>&copy; 2025 Footomo</small></p>
       </div>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const line = document.querySelector('.line');
+        if (line) {
+          line.classList.add('is-animated');
+        }
+      });
+    </script>
   </body>
 </html>
