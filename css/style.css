@@ -347,7 +347,7 @@ padding-top: 10vw;
 
  
 .anim-box.fadeup.is-animated {
-  animation: fadeup 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  animation: fadeup 1s cubic-bezier(0.33, 1, 0.68, 1) 0.2s forwards;
 }
  
 @keyframes fadeup {
