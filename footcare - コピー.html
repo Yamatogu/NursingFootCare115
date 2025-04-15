@@ -110,35 +110,9 @@
           </p>
           <img src="images/risk.png" alt="risk">
         </section>
-        <div id="note-feed" style="font-family: 'Noto Sans JP', sans-serif; padding: 1em;"></div>
+       
 
-<script>
-  const rss_url = "https://note.com/yamato_med/rss";
-  const api_url = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rss_url)}`;
 
-  fetch(api_url)
-    .then(response => response.json())
-    .then(data => {
-      let html = '<h2>最新のNote投稿</h2><div style="display: flex; flex-direction: column; gap: 20px;">';
-      data.items.forEach(item => {
-        const title = item.title;
-        const link = item.link;
-        const desc = item.description.replace(/(<([^>]+)>)/gi, "").slice(0, 80);
-
-        html += `
-          <div style="border: 1px solid #ddd; border-radius: 12px; padding: 1em; background-color: #f8fcf7;">
-            <a href="${link}" target="_blank" style="font-size: 1.2em; font-weight: bold; color: #228b88; text-decoration: none;">
-              ${title}
-            </a>
-            <p style="margin-top: 0.5em; font-size: 0.95em; color: #555;">${desc}...</p>
-            <a href="${link}" target="_blank" style="color: #66cdaa; font-weight: bold;">続きを読む →</a>
-          </div>
-        `;
-      });
-      html += "</div>";
-      document.getElementById("note-feed").innerHTML = html;
-    });
-</script>
 
 
 
@@ -153,9 +127,80 @@
         
         </section>
        -->
-      </div>
+     
 
+       <div id="note-feed" style="font-family: 'Noto Sans JP', sans-serif; padding: 1em;"></div>
 
+       <script>
+         const rssUrl = "https://note.com/yamato_med/rss";
+         const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&random=${Date.now()}`;
+       
+         fetch(apiUrl)
+           .then(response => {
+             if (!response.ok) throw new Error("RSSの取得に失敗しました");
+             return response.json();
+           })
+           .then(data => {
+             const items = data.items.slice(0, 3); // 最新3件のみ
+             if (items.length === 0) {
+               document.getElementById("note-feed").innerHTML = "<p>現在お知らせはありません。</p>";
+               return;
+             }
+       
+             const container = document.createElement("div");
+             container.innerHTML = `<h2 style="font-size: 1.5em; color: #228b88; text-align: left;">最新のお知らせ</h2>`;
+             container.style.display = "flex";
+             container.style.flexDirection = "column";
+             container.style.textAlign = "left";
+             container.style.alignItems = "flex-start";
+       
+             items.forEach(item => {
+               const date = new Date(item.pubDate).toLocaleDateString("ja-JP", {
+                 year: "numeric",
+                 month: "2-digit",
+                 day: "2-digit"
+               });
+       
+               const descText = item.description
+                 .replace(/(<([^>]+)>)/gi, "")
+                 .replace(/&nbsp;/g, " ")
+                 .replace(/(続きをみる|続きを読む)[^。]*$/, "")
+                 .trim()
+                 .slice(0, 100);
+       
+               const entry = document.createElement("div");
+               entry.style.padding = "1em ";
+               entry.style.borderBottom = "1px solid #ccc";
+               entry.style.width = "100%";
+       
+               const link = document.createElement("a");
+               link.href = item.link;
+               link.target = "_blank";
+               link.rel = "noopener noreferrer";
+               link.style.textDecoration = "none";
+               link.style.color = "inherit";
+               link.style.display = "block";
+       
+               link.innerHTML = `
+                 <div style="display: flex; gap: 1em; align-items: baseline; margin-bottom: 0.4em;">
+                   <span style="font-size: 0.85em; color: #888; white-space: nowrap;">${date}</span>
+                   <span style="font-size: 1em; font-weight: 500; color: #228b88;">${item.title}</span>
+                 </div>
+                 <p style="margin: 0; font-size: 0.95em; color: #555;">${descText}...</p>
+               `;
+       
+               entry.appendChild(link);
+               container.appendChild(entry);
+             });
+       
+             document.getElementById("note-feed").appendChild(container);
+           })
+           .catch(error => {
+             console.error("RSS取得エラー:", error);
+             document.getElementById("note-feed").innerHTML = "<p>Noteの読み込みに失敗しました。</p>";
+           });
+       </script>
+       
 
 
       <!-- Footer -->

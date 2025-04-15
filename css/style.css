@@ -380,9 +380,34 @@ padding-top: 10vw;
 /* .sns{
   align-items: center;
 } */
-
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+}
  
+#note-feed {
+  text-align: left;
+  margin-top: 3rem;
+  background-color: #DEEEE6;
+  border-radius: 5px;
+  padding: 10px;
 
+}
+
+#note-feed a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+#note-feed h2 {
+  text-align: left;
+  /* margin-top: 3rem; */
+    margin-bottom: -0.5rem;
+  /* margin-left: 5px; */
+}
 /* footcare
 ----------------------------------------------------------------- */
 .service{
