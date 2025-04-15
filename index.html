@@ -172,8 +172,8 @@
       if (!response.ok) throw new Error("RSSの取得に失敗しました");
       return response.json();
     })
-    .then(items => {
-      const slicedItems = items.slice(0, 3); // 最新3件
+    .then(data => {
+      const items = data.slice(0, 3); // ← ここが重要！
 
       if (slicedItems.length === 0) {
         document.getElementById("note-feed").innerHTML = "<p>現在お知らせはありません。</p>";
