@@ -90,7 +90,7 @@
 
       <script >
         const rssUrl = "https://note.com/yamato_med/rss";
-        const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&random=${Date.now()}`;
+        const apiUrl = `https://api.rss2api.net/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&random=${Date.now()}`;
       
         fetch(apiUrl)
           .then(response => {
