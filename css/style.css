@@ -377,7 +377,9 @@ padding-top: 10vw;
     .pc { display: none !important; }
     .sp { display: block !important; }
 }
-
+.sns{
+  align-items: center;
+}
 
  
 
