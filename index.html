@@ -86,78 +86,151 @@
 
     <main class="main_content wrapper ">
       
-      <div id="note-feed" class="wrapper anim-box fadeup anim is-animated"></div>
+      <!-- <div id="note-feed" class="wrapper anim-box fadeup anim is-animated"></div> -->
 
       <script >
-        const rssUrl = "https://note.com/yamato_med/rss";
-        const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&random=${Date.now()}`;
+        // const rssUrl = "https://note.com/yamato_med/rss";
+        // const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&random=${Date.now()}`;
+      //   const rssUrl = "https://note.com/yamato_med/rss";
+      //   const apiUrl = `https://script.google.com/macros/s/AKfycbx7UBMw1XNyKNaDAjFS5kuYpDpLRwLGH2ne2_b_Dng_g34oly3mMa6BDWn_21xinmqBCw/exec?rss_url=${encodeURIComponent(rssUrl)}`;
+
+      //   fetch(apiUrl)
+      //     .then(response => {
+      //       if (!response.ok) throw new Error("RSSの取得に失敗しました");
+      //       return response.json();
+      //     })
+      //     .then(data => {
+      //       const items = data.items.slice(0, 3); // 最新3件のみ
+      //       if (items.length === 0) {
+      //         document.getElementById("note-feed").innerHTML = "<p>現在お知らせはありません。</p>";
+      //         return;
+      //       }
       
-        fetch(apiUrl)
-          .then(response => {
-            if (!response.ok) throw new Error("RSSの取得に失敗しました");
-            return response.json();
-          })
-          .then(data => {
-            const items = data.items.slice(0, 3); // 最新3件のみ
-            if (items.length === 0) {
-              document.getElementById("note-feed").innerHTML = "<p>現在お知らせはありません。</p>";
-              return;
-            }
-      
-            const container = document.createElement("div");
-            container.innerHTML = `<h2 style="font-size: 1.2rem; color:#174630; text-align: center;">最新のお知らせ</h2>`;
-            container.style.display = "flex";
-            container.style.flexDirection = "column";
-            container.style.textAlign = "left";
-            // container.style.alignItems = "flex-start";
+      //       const container = document.createElement("div");
+      //       container.innerHTML = `<h2 style="font-size: 1.2rem; color:#174630; text-align: center;">最新のお知らせ</h2>`;
+      //       container.style.display = "flex";
+      //       container.style.flexDirection = "column";
+      //       container.style.textAlign = "left";
+      //       // container.style.alignItems = "flex-start";
             
       
-            items.forEach(item => {
-              const date = new Date(item.pubDate).toLocaleDateString("ja-JP", {
-                year: "numeric",
-                month: "2-digit",
-                day: "2-digit"
-              });
+      //       items.forEach(item => {
+      //         const date = new Date(item.pubDate).toLocaleDateString("ja-JP", {
+      //           year: "numeric",
+      //           month: "2-digit",
+      //           day: "2-digit"
+      //         });
       
-              const descText = item.description
-                .replace(/(<([^>]+)>)/gi, "")
-                .replace(/&nbsp;/g, " ")
-                .replace(/(続きをみる|続きを読む)[^。]*$/, "")
-                .trim()
-                .slice(0, 100);
+      //         const descText = item.description
+      //           .replace(/(<([^>]+)>)/gi, "")
+      //           .replace(/&nbsp;/g, " ")
+      //           .replace(/(続きをみる|続きを読む)[^。]*$/, "")
+      //           .trim()
+      //           .slice(0, 100);
       
-              const entry = document.createElement("div");
-              entry.style.padding = "0.5rem 0px";
-              entry.style.borderBottom = "1px solid #ccc";
-              entry.style.width = "100%";
+      //         const entry = document.createElement("div");
+      //         entry.style.padding = "0.5rem 0px";
+      //         entry.style.borderBottom = "1px solid #ccc";
+      //         entry.style.width = "100%";
       
-              const link = document.createElement("a");
-              link.href = item.link;
-              link.target = "_blank";
-              link.rel = "noopener noreferrer";
-              link.style.textDecoration = "none";
-              link.style.color = "inherit";
-              link.style.display = "block";
+      //         const link = document.createElement("a");
+      //         link.href = item.link;
+      //         link.target = "_blank";
+      //         link.rel = "noopener noreferrer";
+      //         link.style.textDecoration = "none";
+      //         link.style.color = "inherit";
+      //         link.style.display = "block";
       
-              link.innerHTML = `
-                <div style="display: flex; gap: 1em; align-items: baseline; margin-bottom: 0.4em;">
-                  <span style="font-size: 0.85em; color: #888; white-space: nowrap;">${date}</span>
-                  <span style="font-size: 1em; font-weight: 500; color: #174630;">${item.title}</span>
-                </div>
-                <p style="margin: 0; font-size: 0.95em; color: #555;">${descText}...</p>
-              `;
+      //         link.innerHTML = `
+      //           <div style="display: flex; gap: 1em; align-items: baseline; margin-bottom: 0.4em;">
+      //             <span style="font-size: 0.85em; color: #888; white-space: nowrap;">${date}</span>
+      //             <span style="font-size: 1em; font-weight: 500; color: #174630;">${item.title}</span>
+      //           </div>
+      //           <p style="margin: 0; font-size: 0.95em; color: #555;">${descText}...</p>
+      //         `;
       
-              entry.appendChild(link);
-              container.appendChild(entry);
-            });
+      //         entry.appendChild(link);
+      //         container.appendChild(entry);
+      //       });
       
-            document.getElementById("note-feed").appendChild(container);
-          })
-          .catch(error => {
-            console.error("RSS取得エラー:", error);
-            document.getElementById("note-feed").innerHTML = "<p>Noteの読み込みに失敗しました。</p>";
-          });
-      </script>
+      //       document.getElementById("note-feed").appendChild(container);
+      //     })
+      //     .catch(error => {
+      //       console.error("RSS取得エラー:", error);
+      //       document.getElementById("note-feed").innerHTML = "<p>Noteの読み込みに失敗しました。</p>";
+      //     });
+      // </script>
+
+<div id="note-feed" class="wrapper anim-box fadeup anim is-animated"></div>
+
+<script>
+  const rssUrl = "https://note.com/yamato_med/rss";
+  const apiUrl = `https://script.google.com/macros/s/AKfycbx7UBMw1XNyKNaDAjFS5kuYpDpLRwLGH2ne2_b_Dng_g34oly3mMa6BDWn_21xinmqBCw/exec?rss_url=${encodeURIComponent(rssUrl)}`;
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) throw new Error("RSSの取得に失敗しました");
+      return response.json();
+    })
+    .then(items => {
+      const slicedItems = items.slice(0, 3); // 最新3件
+
+      if (slicedItems.length === 0) {
+        document.getElementById("note-feed").innerHTML = "<p>現在お知らせはありません。</p>";
+        return;
+      }
+
+      const container = document.createElement("div");
+      container.innerHTML = `<h2 style="font-size: 1.2rem; color:#174630; text-align: center;">最新のお知らせ</h2>`;
+      container.style.display = "flex";
+      container.style.flexDirection = "column";
+      container.style.textAlign = "left";
+
+      slicedItems.forEach(item => {
+        const date = new Date(item.pubDate).toLocaleDateString("ja-JP", {
+          year: "numeric", month: "2-digit", day: "2-digit"
+        });
+
+        const descText = item.description
+          .replace(/(<([^>]+)>)/gi, "")
+          .replace(/&nbsp;/g, " ")
+          .replace(/(続きをみる|続きを読む)[^。]*$/, "")
+          .trim()
+          .slice(0, 100);
+
+        const entry = document.createElement("div");
+        entry.style.padding = "0.5rem 0px";
+        entry.style.borderBottom = "1px solid #ccc";
+        entry.style.width = "100%";
+
+        const link = document.createElement("a");
+        link.href = item.link;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.style.textDecoration = "none";
+        link.style.color = "inherit";
+        link.style.display = "block";
+
+        link.innerHTML = `
+          <div style="display: flex; gap: 1em; align-items: baseline; margin-bottom: 0.4em;">
+            <span style="font-size: 0.85em; color: #888; white-space: nowrap;">${date}</span>
+            <span style="font-size: 1em; font-weight: 500; color: #174630;">${item.title}</span>
+          </div>
+          <p style="margin: 0; font-size: 0.95em; color: #555;">${descText}...</p>
+        `;
+
+        entry.appendChild(link);
+        container.appendChild(entry);
+      });
+
+      document.getElementById("note-feed").appendChild(container);
+    })
+    .catch(error => {
+      console.error("RSS取得エラー:", error);
+      document.getElementById("note-feed").innerHTML = "<p>Noteの読み込みに失敗しました。</p>";
+    });
+</script>
+
 
         <h2 class="page-aboutus page-subtitle anim-box fadeup anim is-animated">About Us</h2>
         
