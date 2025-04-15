@@ -173,9 +173,9 @@
       return response.json();
     })
     .then(data => {
-      const items = data.slice(0, 3); // ← ここが重要！
+      const items = data.slice(0, 3);
 
-      if (slicedItems.length === 0) {
+      if (items.length === 0) {
         document.getElementById("note-feed").innerHTML = "<p>現在お知らせはありません。</p>";
         return;
       }
@@ -186,7 +186,7 @@
       container.style.flexDirection = "column";
       container.style.textAlign = "left";
 
-      slicedItems.forEach(item => {
+      items.forEach(item => {
         const date = new Date(item.pubDate).toLocaleDateString("ja-JP", {
           year: "numeric", month: "2-digit", day: "2-digit"
         });
@@ -230,6 +230,7 @@
       document.getElementById("note-feed").innerHTML = "<p>Noteの読み込みに失敗しました。</p>";
     });
 </script>
+
 
 
         <h2 class="page-aboutus page-subtitle anim-box fadeup anim is-animated">About Us</h2>
