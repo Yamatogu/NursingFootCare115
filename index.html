@@ -89,10 +89,9 @@
       <!-- <div id="note-feed" class="wrapper anim-box fadeup anim is-animated"></div> -->
 
       <script >
+        
         // const rssUrl = "https://note.com/yamato_med/rss";
         // const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&random=${Date.now()}`;
-      //   const rssUrl = "https://note.com/yamato_med/rss";
-      //   const apiUrl = `https://script.google.com/macros/s/AKfycbx7UBMw1XNyKNaDAjFS5kuYpDpLRwLGH2ne2_b_Dng_g34oly3mMa6BDWn_21xinmqBCw/exec?rss_url=${encodeURIComponent(rssUrl)}`;
 
       //   fetch(apiUrl)
       //     .then(response => {
@@ -161,6 +160,7 @@
       //     });
       // </script>
 
+
 <div id="note-feed" class="wrapper anim-box fadeup anim is-animated"></div>
 
 <script>
@@ -196,7 +196,7 @@
           .replace(/&nbsp;/g, " ")
           .replace(/(続きをみる|続きを読む)[^。]*$/, "")
           .trim()
-          .slice(0, 100);
+          .slice(0, 42);
 
         const entry = document.createElement("div");
         entry.style.padding = "0.5rem 0px";
