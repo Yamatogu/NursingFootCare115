@@ -223,7 +223,7 @@ img{
 .page-subtitle {
   font-size: clamp(1.3rem, 2.5vw, 2rem);
   text-align: center; 
-  padding: 1rem 0;
+  padding: 2% 0;
   line-height: 2.1rem;
 }
 
@@ -243,7 +243,7 @@ z-index: 400;
   display: flex;
   flex-direction: column;
   max-width: 800px;
-  padding: 0px 20px;
+  padding: 0px 10px;
   margin: 0px auto;
 }
 .container a{
