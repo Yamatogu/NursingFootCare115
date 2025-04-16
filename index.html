@@ -86,7 +86,21 @@
 
     <main class="main_content wrapper ">
     
-      <div id="note-feed" class="wrapper anim-box fadeup anim is-animated"></div>
+      
+       <section class="aboutus anim-box fadeup anim is-animated">
+        <h2 class="page-aboutus page-subtitle ">About Us</h2>
+        
+        <p class="title-sentence anim-box fadeup anim is-animated">
+          私たち<strong>"Footomo"</strong>は名古屋市・愛知県内を中心に活動する訪問フットケア専門チームです。<br>
+          <span>ドイツ式フットケアの資格を持つ看護師が</span><span>高齢者施設への訪問フットケアを行います。</span><br>
+          また、シューフィッティングや介護美容、セミナー、イベント開催なども行っております。<br>
+          多角的なサポートによって皆様の足の健康を守り、生活の質の向上に繋げます。
+          
+        </p>
+      </section>
+
+
+        <div id="note-feed" class="wrapper anim-box fadeup anim is-animated"></div>
 
         <script>
             const rssUrl = "https://note.com/footomo_aichi/rss";
@@ -106,7 +120,7 @@
                 }
 
                 const container = document.createElement("div");
-                container.innerHTML = `<h2 style="font-size: 1.2rem; color:#174630; text-align: center;">最新のお知らせ</h2>`;
+                container.innerHTML = `<h2 style="font-size: 1.2rem; color:#174630; text-align: center;">最新情報</h2>`;
                 container.style.display = "flex";
                 container.style.flexDirection = "column";
                 container.style.textAlign = "left";
@@ -155,22 +169,12 @@
                 document.getElementById("note-feed").innerHTML = "<p>Noteの読み込みに失敗しました。</p>";
               });
         </script>
-
-        <h2 class="page-aboutus page-subtitle anim-box fadeup anim is-animated">About Us</h2>
-        
-        <p class="title-sentence anim-box fadeup anim is-animated">
-          私たち<strong>"Footomo"</strong>は名古屋市・愛知県内を中心に活動する訪問フットケア専門チームです。<br>
-          <span>ドイツ式フットケアの資格を持つ看護師が</span><span>高齢者施設への訪問フットケアを行います。</span><br>
-          また、シューフィッティングや介護美容、セミナー、イベント開催なども行っております。<br>
-          多角的なサポートによって皆様の足の健康を守り、生活の質の向上に繋げます。
-          
-        </p>
       <section class="treatment anim-box fadeup anim is-animated">
         <h2 class="page-subtitle">施術内容</h2>
         <div class="container">
-            <a href="footcare.html"><img src="images/banner1@2x.jpg" alt="フットケアについて"></a>
-            <a href="shoefitting.html"><img src="images/banner2@2x.jpg" alt="シューフィッティングについて"></a>
-            <a href="nbcpage.html"><img src="images/banner3@2x.jpg" alt="介護美容について"></a>
+            <a href="footcare.html"><img src="images/banner1.jpg" alt="フットケアについて"></a>
+            <a href="shoefitting.html"><img src="images/banner2.jpg" alt="シューフィッティングについて"></a>
+            <a href="nbcpage.html"><img src="images/banner3.jpg" alt="介護美容について"></a>
         </div>
       </section>
       <section class="flow_application">
