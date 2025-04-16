@@ -231,6 +231,7 @@ img{
 .title-sentence{
   /* font-family: serif; */
   text-align: center;
+  padding-bottom: 1rem;
 }
 .title-first{
 }
