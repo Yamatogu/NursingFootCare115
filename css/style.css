@@ -211,20 +211,19 @@ img{
   font-weight: 500;
 }
 .page-aboutus{
-  padding-top: 10% !important;
+  padding-top: 13% !important;
   font-family: "Philosopher", serif;
   /* text-transform: uppercase; */
   font-size: 1.0em !important;
   letter-spacing:  0.08em;
   font-weight: 600;
+  color: #4A4A4A;
 }
-.aboutus{
-  font-size: 1rem;
-}
+
 .page-subtitle {
   font-size: clamp(1.3rem, 2.5vw, 2rem);
   text-align: center; 
-  padding: 9% 3% 3%;
+  padding: 1rem 0;
   line-height: 2.1rem;
 }
 
@@ -234,13 +233,18 @@ img{
   padding-bottom: 1rem;
 }
 .title-first{
+z-index: 400;
 }
 .title-second{
 padding-top: 10vw;
+z-index: 400;
 }
 .container{
   display: flex;
   flex-direction: column;
+  max-width: 800px;
+  padding: 0px 20px;
+  margin: 0px auto;
 }
 .container a{
   margin: 1% 0px;
@@ -261,23 +265,37 @@ padding-top: 10vw;
 .botton:hover{
   background: #499149;
 }
+
+.treatment{   
+   margin: 10% auto;
+
+  
+  }
 .flow-heading {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
-  color: #000;
+  /* margin-bottom: 20px; */
+  color: #1b1b1b;
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  text-align: center;
+  padding:2% 3%;
+  line-height: 2.1rem;
 }
 
 .flow-container {
-  background-color: #fefef9;
-  border-radius: 12px;
-  padding: 30px 20px;
-  max-width: 540px;
-  margin: 0 auto 60px;
+  border-radius: 10px;
+  padding: 16px 20px;
+  max-width: 800px;
+  margin:10% auto;
   position: relative;
 }
-
+.colour-application{
+  background-color: #DEEEE6
+}
+.colour-footcare{
+  background-color: #fff9e0
+}
 .flow-step::before {
   content: "";
   position: absolute;
@@ -380,6 +398,10 @@ padding-top: 10vw;
 }
 #footcare .footcare-content{
   padding-top: 46vw;
+}
+.footcare-content section{
+  margin: 5% 0 10% 
+  ;
 }
 #shoefitting{
   background-image: url(../images/shoefitting_bg.jpg);
@@ -493,10 +515,10 @@ padding-top: 10vw;
  
 #note-feed {
   text-align: left;
-  margin-top: 5vw;
+  margin-top: 4rem;
 
   background-color: #E9F4EE;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
 
 }
