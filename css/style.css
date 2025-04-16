@@ -261,6 +261,103 @@ padding-top: 10vw;
 .botton:hover{
   background: #499149;
 }
+.flow-heading {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.flow-container {
+  background-color: #fefef9;
+  border-radius: 12px;
+  padding: 30px 20px;
+  max-width: 540px;
+  margin: 0 auto 60px;
+  position: relative;
+}
+
+.flow-step::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #ccc;
+  top: 100%;
+  height: 20px;
+  left: 32px;
+  z-index: 0;
+}
+
+.flow-step:last-of-type::before {
+  display: none;
+}
+
+.flow-step {
+  background-color: #fff;
+  border-left: 5px solid #c3d9b8;
+  border-radius: 8px;
+  padding: 15px 16px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 1;
+}
+
+.step-number {
+  font-weight: bold;
+  font-size: 14px;
+  color: #4a805f;
+  margin-top: 2px;
+  flex-shrink: 0;
+  min-width: 56px;
+  white-space: nowrap;
+}
+
+.step-content {
+  font-size: 14px;
+  color: #333;
+  word-break: break-word;
+  flex: 1;
+  line-height: 1.6;
+}
+
+.step-content small {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+.step-content ul {
+  margin: 8px 0;
+  padding-left: 1.2em;
+  font-size: 13px;
+}
+
+.step-content li {
+  margin-bottom: 4px;
+}
+
+.line-btn {
+  background-color: #00c300;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-right: 6px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+
 /*大きな背景画像*/
 .big-bg{
   background-size:cover;
