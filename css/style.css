@@ -169,6 +169,12 @@ img{
     letter-spacing: 0.06em;
 
 }
+
+.mini-nav-wrapper{
+  /* background-color:#0e6227; */
+  border-radius: 10px;
+  margin-left: 15px;
+}
 /* 幅768px以下の画面で切り替える */
 @media screen and (max-width: 920px) {
   .header_right {
@@ -413,14 +419,14 @@ z-index: 400;
   ;
 }
 #shoefitting{
-  background-image: url(../images/shoefitting_bg.jpg);
+  background-image: url(../images/shoefitting_bg2x.jpg);
   width: 100%;
   height: 46vw;
-  margin-top: -6vw;
+  margin-top: -20vw;
   /* min-height: 500px;  */
 }
 #shoefitting .footcare-content{
-  padding-top: 46vw;
+  padding-top: 50vw;
 }
 
 #home .page-title{
@@ -550,14 +556,14 @@ z-index: 400;
 
 }
 #footcare{
-  background-image: url(../images/footcare_bg.jpg);
+  background-image: url(../images/footcare_bg2x.jpg);
   width: 100%;
   height: 46vw;
-  margin-top: -6vw;
+  margin-top: -20vw;
   /* min-height: 500px;  */
 }
 #footcare .footcare-content{
-  padding-top: 46vw;
+  padding-top: 50vw;
 }
 #footcare p{
   font-size: 1rem;
@@ -679,14 +685,14 @@ margin: 6px auto 18px;
 /* nbcpage
 ^------------------------------------------------------------------- */
 #nbcpage{
-  background-image: url(../images/nbc_bg.jpg);
+  background-image: url(../images/nbc_bg2x.jpg);
   width: 100%;
   height: 46vw;
-  margin-top: -6vw;
+  margin-top: -20vw;
   /* min-height: 500px;  */
 }
 #nbcpage .footcare-content{
-  padding-top: 46vw;
+  padding-top: 50vw;
 }
 #nbcpage .page-title{
   padding-top: 2vw ;
