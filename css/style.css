@@ -22,7 +22,11 @@ img{
   margin: 0 auto; /*中央に配置*/
   padding: 0 4%;
 }
-
+.mini-wrapper{
+  background-color: #DEEEE6;
+  border-radius: 10px;
+  padding: 4%;
+}
 /*HEADER
 -------------------------------------- */
 .page-header {
@@ -403,16 +407,7 @@ z-index: 400;
   min-height: 500px; 
  
 }
-#footcare{
-  background-image: url(../images/footcare_bg.jpg);
-  width: 100%;
-  height: 46vw;
-  margin-top: -6vw;
-  /* min-height: 500px;  */
-}
-#footcare .footcare-content{
-  padding-top: 46vw;
-}
+
 .footcare-content section{
   margin: 5% 0 5% 
   ;
@@ -554,16 +549,24 @@ z-index: 400;
   font-size: 4vw;
 
 }
+#footcare{
+  background-image: url(../images/footcare_bg.jpg);
+  width: 100%;
+  height: 46vw;
+  margin-top: -6vw;
+  /* min-height: 500px;  */
+}
+#footcare .footcare-content{
+  padding-top: 46vw;
+}
+#footcare p{
+  font-size: 1rem;
+}
 #shoefitting .page-title{
   padding-top: 2vw ;
   font-size: 4vw;
-
 }
-#nbcpage .page-title{
-  padding-top: 2vw ;
-  font-size: 4vw;
 
-}
 .footcare-content{
   text-align: center;
   margin-bottom: 80px; /* ← これを追加して下にスペースを確保 */
@@ -571,12 +574,8 @@ z-index: 400;
 span{
   display: inline-block;
 } 
-#footcare p{
-  font-size: 1rem;
-}
+
 #shoefitting p{
-  font-size: 1rem;
-}#nbcpage p{
   font-size: 1rem;
 }
 .treatment-list{
@@ -689,9 +688,44 @@ margin: 6px auto 18px;
 #nbcpage .footcare-content{
   padding-top: 46vw;
 }
+#nbcpage .page-title{
+  padding-top: 2vw ;
+  font-size: 4vw;
 
+}
+#nbcpage p{
+  font-size: 1rem;
+}
+/* about */
 
+#about .footcare-content{
+  padding-top: 46vw;
+  align-items: center;
+}
+#about .page-title{
+  padding-top: 2vw ;
+  font-size: 4vw;
 
+}
+#about{
+  background-image: url(../images/footomo_bg_without.jpg);
+  width: 100%;
+  height: 46vw;
+  margin-top: -21vw;
+  /* min-height: 500px;  */
+}
+.portrait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.portrait img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
 /* footer
 -------------------------------------------------------------------- */
 
@@ -834,6 +868,9 @@ footer p{
   font-size: 8vw;
 }
 #nbcpage .page-title {
+  font-size: 8vw;
+}
+#about .page-title{
   font-size: 8vw;
 }
 .mini-comment{
