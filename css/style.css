@@ -15,7 +15,7 @@ a{
   text-decoration: none;
 }
 p{
-  font-size: clamp(0.85rem, 2.0vw, 2rem);
+  font-size: clamp(0.85rem, 2.0vw, 1.75rem);
 }
 img{
   max-width: 100%;
@@ -263,8 +263,11 @@ border-radius: 1rem;
 z-index: 400;
 }
 .title-second{
-padding-top: 13vw;
+padding-top: 3rem;
 z-index: 400;
+}
+.title-wrapper{
+  line-height: 1.2;
 }
 .container{
   display: flex;
@@ -871,16 +874,16 @@ footer p{
   }
   /* footcare */
   #footcare .page-title {
-    font-size: 8vw;
+    font-size: 2em;
 }
 #shoefitting .page-title {
-  font-size: 8vw;
+  font-size: 2em;
 }
 #nbcpage .page-title {
-  font-size: 8vw;
+  font-size: 2em;
 }
 #about .page-title{
-  font-size: 8vw;
+  font-size:2em;
 }
 .mini-comment{
   font-size:1rem;
