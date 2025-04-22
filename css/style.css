@@ -11,7 +11,7 @@ body{
   color:#174630;
   margin:0 auto;
 
-  
+
 } 
 a{
   text-decoration: none;
@@ -38,6 +38,51 @@ img{
   display: flex;
   justify-content: center;
 }
+.image-gallery {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 400px; /* 必要に応じて調整 */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 必要なら contain も可 */
+  
+}
+.slide {
+  white-space: nowrap;
+  max-width: 400px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;  
+}
+.slide img {
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin: -0.75%;
+}
+@keyframes slide-4 {
+  0% { margin-left: 0; }
+  25% { margin-left: -100%; }
+  50% { margin-left: -200%; }
+  75% { margin-left: -300%; }
+  100% { margin-left: -400%; }
+}
+.slide > :first-child {
+  animation-name: slide-4;     /* 作成したキーフレームを使う */
+  animation-duration:15s;    /* アニメーション全体を5秒にする */
+  animation-delay: 0s;       /* 直ちにアニメーション開始する */
+  animation-iteration-count: infinite; /* 永遠にアニメーションする */
+  /* animation-timing-function: linear;  */
+}
+
 /*HEADER
 -------------------------------------- */
 .page-header {
@@ -428,7 +473,7 @@ z-index: 400;
 }
 
 .footcare-content section{
-  margin: 5% 0 5% 
+  margin: 5% auto 5% 
   ;
 }
 #shoefitting{
@@ -628,8 +673,6 @@ margin: 6px auto 18px;
 .line.is-animated::after {
   width: 100%;
 }
-
-
 
 /* shoefitting */
 .number_3{
