@@ -17,7 +17,7 @@ a{
   text-decoration: none;
 }
 p{
-  font-size: clamp(0.95rem, 2.0vw, 1.3rem);
+  font-size: clamp(1.0rem, 2.0vw, 1.3rem);
   line-height: 1.5em;
 }
 img{
@@ -312,6 +312,7 @@ border-radius: 1rem;
   /* font-family: serif; */
   text-align: center;
   padding-bottom: 1rem;
+  font-size: clamp(0.9rem, 2.0vw, 1.3rem);
 }
 .title-first{
 z-index: 400;
