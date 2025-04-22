@@ -15,13 +15,14 @@ a{
   text-decoration: none;
 }
 p{
-  font-size: clamp(0.85rem, 2.0vw, 1.75rem);
+  font-size: clamp(1.0rem, 2.0vw, 1.3rem);
+  line-height: 1.5em;
 }
 img{
   max-width: 100%;
 }
 .wrapper{
-  max-width: 1100px; /*最大幅指定*/
+  max-width: 800px; /*最大幅指定*/
   margin: 0 auto; /*中央に配置*/
   padding: 0 4%;
 }
@@ -29,6 +30,11 @@ img{
   background-color: #DEEEE6;
   border-radius: 10px;
   padding: 4%;
+}
+.image-center{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 /*HEADER
 -------------------------------------- */
@@ -162,7 +168,6 @@ img{
   font-weight: bold;
 }
 .header-line{
-    /* font-size: 2rem; */
     background: Mediumseagreen;
     color:#fff !important;
     border-radius: 10px;/*角を丸くする*/
@@ -285,7 +290,7 @@ z-index: 400;
 }
 /*ボタン*/
 .botton{
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: Mediumseagreen;
   color:#fff;
   border-radius: 20px;/*角を丸くする*/
@@ -556,11 +561,11 @@ z-index: 400;
 .service{
   text-align: right;
 }
-#footcare .page-title{
-  padding-top: 2vw ;
-  font-size: 4vw;
-
+.page-title{
+  text-align: center;
+  font-size: clamp(1.62em, 3vw, 2.5em);
 }
+
 #footcare{
   background-image: url(../images/footcare_bg2x.jpg);
   width: 100%;
@@ -571,25 +576,25 @@ z-index: 400;
 #footcare .footcare-content{
   padding-top: 50vw;
 }
-#footcare p{
+/* #footcare p{
   font-size: 1rem;
-}
-#shoefitting .page-title{
+} */
+/* #shoefitting .page-title{
   padding-top: 2vw ;
   font-size: 4vw;
-}
+} */
 
 .footcare-content{
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 80px; /* ← これを追加して下にスペースを確保 */
 }
 span{
   display: inline-block;
 } 
 
-#shoefitting p{
+/* #shoefitting p{
   font-size: 1rem;
-}
+} */
 .treatment-list{
 font-size: 1rem;
 list-style-type: disc;
@@ -660,14 +665,19 @@ margin: 6px auto 18px;
 .point-lists{
   color: #444;
   margin: 10px 0px;
-  padding: 7px;
+  padding: 3%;
   background-color: #FBFDD1;
   border-radius: 10px;
 }
+.point-lists-title{
+  text-align: center;
+}
 .point-box h3{
-  margin: 5px 0px;
+  margin: 5px auto;
   background: linear-gradient(transparent 60%, #77FFBF 30%);
   display: inline-block;
+  text-align: center;
+  
 }
 .point-box p{
   margin: 5px 0px;
@@ -681,7 +691,7 @@ margin: 6px auto 18px;
 }
 .last-statement{
   display: flex;
-  justify-content: center;
+  justify-content:left;
   align-items: center;
   gap: 10px;
 }
@@ -700,25 +710,17 @@ margin: 6px auto 18px;
 #nbcpage .footcare-content{
   padding-top: 50vw;
 }
-#nbcpage .page-title{
-  padding-top: 2vw ;
-  font-size: 4vw;
 
-}
-#nbcpage p{
+/* #nbcpage p{
   font-size: 1rem;
-}
+} */
 /* about */
 
 #about .footcare-content{
   padding-top: 50vw;
 
 }
-#about .page-title{
-  padding-top: 2vw ;
-  font-size: 4vw;
 
-}
 #about{
   background-image: url(../images/footomo_bg_without.jpg);
   width: 100%;
@@ -737,6 +739,10 @@ margin: 6px auto 18px;
   width: 100%;
   max-width: 400px;
   height: auto;
+}
+
+.greeting{
+  text-align: left;
 }
 /* footer
 -------------------------------------------------------------------- */
@@ -791,13 +797,12 @@ footer p{
 
 
 
-
+/* 
 @media(max-width: 950px) {
   .home-content p{
     font-size: 1.2rem;
-    /* margin: -2px 0px 51px; */
   }
-}
+} */
 
 
 
@@ -807,12 +812,13 @@ footer p{
 /* モバイル版 -------------------------------------------------------------*/
 @media(max-width: 800px) {
   .wrapper{
-    max-width: 95%;/*最大幅指定*/
-    margin: 0 auto;/*中央に配置*/
-    padding: 0 4%;
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 0 0%;
   }
   .page-title{
-    font-size: 1.5rem;
+    /* font-size: 1.6rem; */
+    text-align: center;
     /* font-weight: bold; */
   }
  
@@ -832,10 +838,10 @@ footer p{
   #home .title-wrapper{
     margin: 0 auto 0;
   }
-  .home-content p{
+  /* .home-content p{
     font-size: 0.8rem;
     margin: -2px 0px 51px;
-  }
+  } */
   
   .botton {
     font-size: 1.0rem;
@@ -873,7 +879,7 @@ footer p{
     align-items: center;
   }
   /* footcare */
-  #footcare .page-title {
+  /* #footcare .page-title {
     font-size: 2em;
 }
 #shoefitting .page-title {
@@ -884,7 +890,7 @@ footer p{
 }
 #about .page-title{
   font-size:2em;
-}
+} */
 .mini-comment{
   font-size:1rem;
 }
