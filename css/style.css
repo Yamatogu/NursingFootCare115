@@ -28,6 +28,10 @@ img{
   margin: 0 auto; /*中央に配置*/
   padding: 0 4%;
 }
+.wrapper{
+  max-width: 1000px;
+  margin: 0 auto; /*中央に配置*/
+}
 .mini-wrapper{
   background-color: #DEEEE6;
   border-radius: 10px;
@@ -579,20 +583,21 @@ z-index: 400;
   align-items: center;
   margin: 0px auto;
 }
- 
+.note-bg{
+
+  background-color: #E9F4EE;  
+  align-items: center;
+}
 #note-feed {
   text-align: left;
-  margin-top: 4rem;
+  margin-top: 3rem;
 
-  background-color: #E9F4EE;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 10px;
 
 }
 #note-feed.wrapper {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  max-width: 100% !important;
+
 }
 #note-feed a {
   display: block;
