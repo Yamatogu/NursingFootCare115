@@ -368,7 +368,7 @@ html {
   bottom: 0;
   z-index: 2;
   padding: 10px 10px 110px;
-  color: #4A4A4A;
+  color: #5b5b5b;
   font-size: 14px;
   font-family: 'Josefin Sans', sans-serif;
   line-height: 1;
@@ -385,7 +385,7 @@ html {
     left: 50%;
     width: 1px;
     height: 100px;
-    background: #4A4A4A;
+    background: #5b5b5b;
   }
   &:hover {
     opacity: .5;
