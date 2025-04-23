@@ -24,7 +24,7 @@ img{
   max-width: 100%;
 }
 .wrapper{
-  max-width: 1000px; /*最大幅指定*/
+  max-width: 800px; /*最大幅指定*/
   margin: 0 auto; /*中央に配置*/
   padding: 0 4%;
 }
@@ -352,7 +352,15 @@ z-index: 400;
 .botton:hover{
   background: #499149;
 }
-
+.flow-wrapper{
+  display: flex;
+  justify-content:space-between;
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto; /*中央に配置*/
+  gap: 1rem;
+ 
+}
 .treatment{   
    margin: 3rem auto;
 
@@ -362,7 +370,7 @@ z-index: 400;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
-  /* margin-bottom: 20px; */
+  margin-bottom: 20px;
   color: #1b1b1b;
   font-size: clamp(1.3rem, 2.5vw, 2rem);
   text-align: center;
@@ -376,6 +384,7 @@ z-index: 400;
   max-width: 800px;
   margin:10px auto;
   position: relative;
+  width: -webkit-fill-available;
  
 }
 .colour-flow{
@@ -568,14 +577,20 @@ z-index: 400;
     .pc { display: none !important; }
     .sp { display: block !important; }
 }
-/* .sns{
-  align-items: center;
-} */
+.sns{
+  padding: 3rem 10px;
+}
 .instagram {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0px auto;
+  padding: 3rem 10px;
+}
+
+.instagram-media{
+  margin: 0 auto;
+
 }
 .note-bg{
 
@@ -872,7 +887,7 @@ footer p{
   .wrapper{
     max-width: 90%;
     margin: 0 auto;
-    /* padding: 0 0%; */
+    padding: 0 0%;
   }
   .page-title{
     /* font-size: 1.6rem; */
@@ -901,7 +916,7 @@ footer p{
     font-size: 0.8rem;
     margin: -2px 0px 51px;
   } */
-  
+
   .botton {
     font-size: 1.0rem;
     text-align:center;
@@ -937,6 +952,12 @@ footer p{
     
     align-items: center;
   }
+  .flow-wrapper{
+    flex-direction: column;
+     margin: 0 auto; /*中央に配置*/
+     gap: 0rem;
+    width: auto;
+   }
   .flow-container {
     border-radius: 0px;
     margin:0px auto;
