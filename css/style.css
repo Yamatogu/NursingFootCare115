@@ -387,9 +387,7 @@ html {
     height: 100px;
     background: #5b5b5b;
   }
-  &:hover {
-    opacity: .5;
-  }
+  
 }
 
 #type01 a::after {
