@@ -28,6 +28,25 @@ img{
   margin: 0 auto; 
   padding: 0 4%;
 }
+.sentence-padding-large{
+  max-width: 800px; /*最大幅指定*/
+  margin: 0 auto; 
+  padding: 3rem 10px;
+  max-width: 90%;
+}
+.sentence-padding-title{
+  max-width: 800px; /*最大幅指定*/
+  margin: 0 auto; 
+  padding: 3rem 10px;
+}
+.sentence-padding-list{
+  max-width: 800px; /*最大幅指定*/
+  margin: 0 auto; 
+  padding: 3rem 10px;
+}
+.text-center{
+  text-align: center;
+}
 .center-align{
   margin: 1rem auto;
   text-align: center;
@@ -306,18 +325,6 @@ img{
   line-height: 2.1rem;
  
 }
-/* .title-line::before{
-content: "";
-width: 15vw;
-height: 1vw;
-border-radius: .3vh;
-background-color: #174630;
-position: absolute;
-left: 0;
-right: 0;
-margin: auto;
-border-radius: 1rem;
-} */
 
 .title-sentence{
   /* font-family: serif; */
@@ -500,6 +507,9 @@ z-index: 400;
   /* margin: 5% auto 5% ; */
   padding: 3rem 10px;
 }
+
+
+
 #shoefitting{
   background-image: url(../images/shoefitting_bg2x.jpg);
   width: 100%;
@@ -652,7 +662,7 @@ list-style-type: disc;
 padding-left: 1.5em; 
 line-height: 1.8; color:#333;
 margin: 6px auto 18px;
-/* width: 400px; */
+max-width: 340px;
 }
 .treatment-list li{
   text-align: left;
