@@ -770,7 +770,9 @@ margin: 6px auto 18px;
 .nbc-menu{
   padding: 3rem 10px;
 }
-
+.nbc-detail{
+  padding: 1rem 10px 3rem;
+}
 #about .footcare-content{
   padding-top: 50vw;
 
@@ -876,6 +878,7 @@ footer p{
     /* font-size: 1.6rem; */
     text-align: center;
     /* font-weight: bold; */
+    margin: 0.7rem auto;
   }
  
   #home{
