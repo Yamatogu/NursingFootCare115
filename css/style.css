@@ -837,6 +837,7 @@ footer p{
   gap: 7px;
   margin: 40px 19px;
   flex-wrap: wrap; /* モバイル対応 */
+  
 }
 
 .footer-box-1 img.logo-footer {
@@ -860,6 +861,7 @@ footer p{
 .footer-box-3 {
   margin-top: 0;
   display: flex;
+  font-size: 0;
 }
 .footer-box-3 img {
   width: 35px;
