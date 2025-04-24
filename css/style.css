@@ -628,7 +628,7 @@ z-index: 400;
 }
 
 .instagram-media{
-  margin: 0 auto;
+  margin: 0 auto !important;
 
 }
 .note-bg{
