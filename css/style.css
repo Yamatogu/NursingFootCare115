@@ -36,21 +36,21 @@ img{
   margin: 0 auto; 
   padding: 3rem 10px;
   width: 95%;
-  max-width: 800px;
+
 }
 .sentence-padding-medium{
   max-width: 800px; /*最大幅指定*/
   margin: 0 auto; 
-  padding: 3rem 10px;
+  padding: 1rem 10px;
   width: 95%;
-  max-width: 800px;
+ 
 }
 .sentence-padding-title{
   max-width: 800px; /*最大幅指定*/
   margin: 0 auto; 
   padding: 2rem 10px 3rem;
   width: 95%;
-  max-width: 800px;
+
 }
 .sentence-padding-list{
   max-width: 800px; /*最大幅指定*/
@@ -360,17 +360,82 @@ html {
 
 
 
+.aboutus-bg{
+  background-color: #E9F4EE;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-size: 150%;
+
+}
 
 .page-aboutus{
-  padding-top: 13% !important;
   font-family: "Philosopher", serif;
-  /* text-transform: uppercase; */
   font-size: 1.0em !important;
   letter-spacing:  0.08em;
   font-weight: 600;
   color: #4A4A4A;
+  text-align: center; 
+  padding: 2% 0;
+  line-height: 2.1rem;
 }
 
+
+.nayami-bg{
+  position: relative;
+  /* border-radius: 50%;
+  background-color: #80EBB0; */
+  max-width:500px;/*最大幅指定*/
+  margin: 2rem auto;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nayami-bg::before {
+  content: "";
+  position: absolute;
+  width: 350px;     /* 拡大したい大きさ */
+  height: 350px;
+  background: #e8fff3;
+  border-radius: 50%; /* 円形 */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  
+}
+.nayami-content{
+
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:4rem 0 ;
+}
+.nayami-content p{
+  font-size: clamp(1.2rem, 2.0vw, 1.5rem);
+  line-height: 160%;
+}
+.nayami-title{
+font-size: clamp(1.62em, 3vw, 2.5em);
+max-width: 80%;
+}
+
+
+.nayami-girl{
+  width:10rem;
+  max-width: 100px;
+  margin-top: 1rem;
+}
+.arrows{
+  width: 7rem;
+  max-width: 100px;
+  padding: 3rem 0;
+}
 .page-subtitle {
   font-size: clamp(1.3rem, 2.5vw, 2rem);
   text-align: center; 
@@ -383,8 +448,8 @@ html {
 .title-sentence{
   /* font-family: serif; */
   text-align: center;
-  padding-bottom: 3rem;
-  font-size: clamp(0.9rem, 2.0vw, 1.3rem);
+  padding-bottom: 1rem;
+  font-size: clamp(0.9rem, 2.0vw, 1.0rem);
 }
 .title-first{
 z-index: 400;
@@ -469,6 +534,7 @@ z-index: 400;
   /* margin:10px auto; */
   position: relative;
   width: -webkit-fill-available;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
  
 }
 .bg-sp{
@@ -599,7 +665,15 @@ z-index: 400;
   text-align: center;
   padding-bottom: 400px;
 }
-
+/* .text-question{
+  font-size:2rem ;
+} */
+.under-line{
+  margin: 5px auto;
+  background: linear-gradient(transparent 60%, #f8ffb7 30%);
+  display: inline-block;
+  text-align: center;
+}
 
 .application{
   padding: 3rem 10px;
@@ -837,6 +911,7 @@ max-width: 340px;
   padding: 3%;
   background-color: #FBFDD1;
   border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 .point-lists-title{
   text-align: center;
@@ -1113,5 +1188,16 @@ footer p{
   }
   .sitemap-list {
     margin: 1rem 0;
+}
+}
+
+
+
+
+
+
+@media(max-width: 460px) {
+.nayami-content{
+  padding: 0;
 }
 }
