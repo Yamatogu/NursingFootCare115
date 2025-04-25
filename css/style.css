@@ -154,6 +154,7 @@ img{
     width: 100%;
     z-index: 1000;
     align-items: flex-end;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     /* font-size: 0; */
 }
 
@@ -162,6 +163,7 @@ img{
   /* margin-top: 25px; */
   margin-left: 10px;
   vertical-align: bottom;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
 }
 
 .main-nav{
@@ -276,6 +278,9 @@ img{
   font-size: 1.1rem;
   font-weight: bold;
 }
+.nav_list a:hover{
+  color:#1da345;   /*カーソル上の時色変化*/
+}
 .header-line{
     background: #03c103;
     color:#fff !important;
@@ -286,6 +291,9 @@ img{
     letter-spacing: 0.06em;
     font-weight: 600;
 
+}
+.header-line:hover{
+  filter: brightness(80%) ;
 }
 
 .mini-nav-wrapper{
@@ -403,6 +411,17 @@ z-index: 400;
   text-align: center;
   /* margin: 40px 0; 適度な上下の余白も追加 */
 }
+.note_botton{
+  text-align: center;
+}
+.note_botton .botton{
+  background-color: #25714d;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1rem;
+
+}
+
 /*ボタン*/
 .botton{
   font-size: 1.5rem;
@@ -412,9 +431,10 @@ z-index: 400;
   padding:18px 32px;
   display: inline-block;
   font-weight: 600;
+  margin: 1rem auto;
 }
 .botton:hover{
-  background: #499149;
+  filter: brightness(80%) ;
 }
 .flow-wrapper{
   display: flex;
@@ -532,7 +552,9 @@ z-index: 400;
   display: inline-block;
   text-decoration: none;
 }
-
+.line-btn:hover{
+    filter: brightness(80%) ;
+  }
 
 
 /*大きな背景画像*/
@@ -544,7 +566,7 @@ z-index: 400;
 #home{
   background-image: url(../images/footomo_bg_hq.jpg);
   width: 100%;
-  height: 60vw;
+  height: 47.5vw;
   min-height: 570px; 
  
 }
@@ -556,7 +578,7 @@ z-index: 400;
 #shoefitting{
   background-image: url(../images/shoefitting_bg2x.jpg);
   width: 100%;
-  height: 46vw;
+  height: 47.5vw;
   margin-top: -29vw;
   /* min-height: 500px;  */
 }
@@ -582,6 +604,7 @@ z-index: 400;
 .application{
   padding: 3rem 10px;
   background-image: linear-gradient(135deg, #f0fff8 0%, #87F8C3 100%);
+  box-shadow: 0 0px 10px  rgba(0, 0, 0, 0.35);
 }
 .sec-cont{
   padding: 2rem;
@@ -595,7 +618,25 @@ z-index: 400;
 .privacy-cont ul{
   padding-left: 1rem;
 }
+.sitemap{
+text-align: left;
+display: flex;
+justify-content: center;
+max-width: 70%;
+margin: 0 auto;
+font-size:1rem;
+}
+.sitemap ul{
+  list-style: none;
+}
+.sitemap-list{
+  margin: 1rem 3rem;
 
+
+}
+.sitemap-list a{
+  color:#4A4A4A; 
+}
 /* 初期状態（アニメーション前） */
 .anim-box.fadeup {
   opacity: 0;
@@ -649,13 +690,11 @@ z-index: 400;
 
   background-color: #E9F4EE;  
   align-items: center;
+  padding: 3rem 10px;
 }
 #note-feed {
   text-align: left;
-  /* margin-top: 3rem; */
 
-  /* border-radius: 10px; */
-  padding: 3rem 10px;
 
 }
 
@@ -684,7 +723,7 @@ z-index: 400;
 #footcare{
   background-image: url(../images/footcare_bg2x.jpg);
   width: 100%;
-  height: 46vw;
+  height: 47.5vw;
   margin-top: -29vw;
   /* min-height: 500px;  */
 }
@@ -704,9 +743,13 @@ span{
   display: inline-block;
 } 
 
-/* #shoefitting p{
-  font-size: 1rem;
-} */
+.treatment img{
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+  /* border-radius: 20px; */
+}
+.treatment img:hover{
+  filter: brightness(90%) ;
+}
 .treatment-list{
 font-size: 1rem;
 list-style-type: disc;
@@ -813,7 +856,7 @@ max-width: 340px;
 #nbcpage{
   background-image: url(../images/nbc_bg2x.jpg);
   width: 100%;
-  height: 46vw;
+  height: 47.5vw;
   margin-top: -29vw;
   /* min-height: 500px;  */
 }
@@ -828,6 +871,7 @@ max-width: 340px;
 .nbc-menu-bg{
   background-color: #E9F4EE;  
   align-items: center;
+  box-shadow: 0 0px 10px  rgba(0, 0, 0, 0.35);
 }
 .nbc-menu{
   padding: 3rem 10px;
@@ -843,7 +887,7 @@ max-width: 340px;
 #about{
   background-image: url(../images/footomo_bg_without.jpg);
   width: 100%;
-  height: 46vw;
+  height: 47.5vw;
   margin-top: -29vw;
   /* min-height: 500px;  */
 }
@@ -878,13 +922,16 @@ footer p{
   color:#fff;
   font-size: 0.875rem;
 }
+.footer-wrapper{
+  margin: 40px 19px;
 
+
+}
 .footer-box-1 {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 7px;
-  margin: 40px 19px;
   flex-wrap: wrap; /* モバイル対応 */
   
 }
@@ -955,7 +1002,8 @@ footer p{
   .page-header{
     
     align-items: center;
-    padding: 5px 6px 0px 16px;
+    padding: 5px 6px 5px 16px;
+    
   }
  
   #home{
@@ -1040,5 +1088,14 @@ footer p{
 } */
 .mini-comment{
   font-size:1rem;
+}
+.sitemap{
+  text-align: left;
+ flex-direction: column;
+ justify-content: center;
+ 
+  }
+  .sitemap-list {
+    margin: 1rem 0;
 }
 }

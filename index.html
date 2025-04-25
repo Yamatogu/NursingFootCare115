@@ -109,83 +109,14 @@
         </p>
        </section>
 
-        <!-- <div class="note-bg"> <div id="note-feed" class="wrapper anim-box fadeup anim is-animated"></div></div>
-       
-
-        <script>
-            const rssUrl = "https://note.com/footomo_aichi/rss";
-            const apiUrl = `https://script.google.com/macros/s/AKfycbx7UBMw1XNyKNaDAjFS5kuYpDpLRwLGH2ne2_b_Dng_g34oly3mMa6BDWn_21xinmqBCw/exec?rss_url=${encodeURIComponent(rssUrl)}`;
-
-            fetch(apiUrl)
-              .then(response => {
-                if (!response.ok) throw new Error("RSSの取得に失敗しました");
-                return response.json();
-              })
-              .then(data => {
-                const items = data.slice(0, 3);
-
-                if (items.length === 0) {
-                  document.getElementById("note-feed").innerHTML = "<p>現在お知らせはありません。</p>";
-                  return;
-                }
-
-                const container = document.createElement("div");
-                container.innerHTML =  `<h2 style="font-size: 1.3rem; color:#174630; text-align: center; padding:2% 0;">最新情報</h2>`;
-                container.style.display = "flex";
-                container.style.flexDirection = "column";
-                container.style.textAlign = "left";
-
-                items.forEach(item => {
-                  const date = new Date(item.pubDate).toLocaleDateString("ja-JP", {
-                    year: "numeric", month: "2-digit", day: "2-digit"
-                  });
-
-                  const descText = item.description
-                    .replace(/(<([^>]+)>)/gi, "")
-                    .replace(/&nbsp;/g, " ")
-                    .replace(/(続きをみる|続きを読む)[^。]*$/, "")
-                    .trim()
-                    .slice(0, 42);
-
-                  const entry = document.createElement("div");
-                  entry.style.padding = "1rem 0px";
-                  entry.style.borderBottom = "1px solid #ccc";
-                  entry.style.width = "100%";
-
-                  const link = document.createElement("a");
-                  link.href = item.link;
-                  link.target = "_blank";
-                  link.rel = "noopener noreferrer";
-                  link.style.textDecoration = "none";
-                  link.style.color = "inherit";
-                  link.style.display = "block";
-
-                  link.innerHTML = `
-                    <div style="display: flex; gap: 1em; align-items: baseline; margin-bottom: 0.4em;">
-                      <span style="font-size: 0.85em; color: #888; white-space: nowrap;">${date}</span>
-                      <span style="font-size: 1em; font-weight: 500; color: #174630;">${item.title}</span>
-                    </div>
-                    <p style="margin: 0; font-size: 0.95em; color: #555;">${descText}...</p>
-                  `;
-
-                  entry.appendChild(link);
-                  container.appendChild(entry);
-                });
-
-                document.getElementById("note-feed").appendChild(container);
-              })
-              .catch(error => {
-                console.error("RSS取得エラー:", error);
-                document.getElementById("note-feed").innerHTML = "<p>Noteの読み込みに失敗しました。</p>";
-              });
-        </script> -->
+     
 
       <section class="treatment anim-box fadeup anim is-animated">
         <h2 class="page-subtitle">施術内容</h2>
         <div class=" wrapper container">
-            <a href="footcare.html"><img src="images/banner1.jpg" alt="フットケアについて"></a>
-            <a href="shoefitting.html"><img src="images/banner2.jpg" alt="シューフィッティングについて"></a>
-            <a href="nbcpage.html"><img src="images/banner3.jpg" alt="介護美容について"></a>
+            <a href="footcare.html"><img src="images/banner1.png" alt="フットケアについて"></a>
+            <a href="shoefitting.html"><img src="images/banner2.png" alt="シューフィッティングについて"></a>
+            <a href="nbcpage.html"><img src="images/banner3.png" alt="介護美容について"></a>
         </div>
       </section>
       
@@ -281,7 +212,15 @@
       
       </section>
     </main>
-    <div class="note-bg"> <div id="note-feed" class="wrapper anim-box fadeup anim is-animated"></div></div>
+    <div class="note-bg"> 
+      <div id="note-feed" class="wrapper anim-box fadeup anim is-animated">
+      </div>
+      <div class="note_botton">
+        <a class="botton" href="https://note.com/footomo_aichi">
+          一覧を見る
+        </a>
+      </div> 
+    </div>
        
 
     <script>
@@ -352,6 +291,7 @@
           });
     </script>
      
+     <section class="footer-wrapper">
       <div class="footer-box-1">
         <a href="index.html"> <img src="images/logo.png" alt="Footomo" class="logo-footer"></a>
      
@@ -365,9 +305,27 @@
             <img src="images/insta_logo.png" alt="INSTAGRAM">
             </a>
           </div>
+         
         </div>
-      </div>
-    
+       
+      </div> 
+      <div class="sitemap">
+        <ul class="sitemap-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ごあいさつ</a></li>
+          <li><a href="footcare.html">訪問フットケア</a></li>
+          <li><a href="shoefitting.html">シューフィッティング</a></li>
+          <li><a href="nbcpage.html">介護美容</a></li>
+          <li><a href="index.html">セミナー</a></li>
+        </ul>
+        <ul class="sitemap-list">
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="legal-notice.html">特定商取引法に基づく表記</a></li>
+          <li><a href="contract.html">利用規約</a></li>
+          
+        </ul>
+    </div>
+  </section>
     
     
     <footer>
