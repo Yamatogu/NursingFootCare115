@@ -509,6 +509,12 @@ z-index: 400;
   text-align: center;
   /* margin: 40px 0; 適度な上下の余白も追加 */
 }
+.mail_botton{
+  text-align: center;
+}
+.mail_botton .botton{
+  background-color: #c7c7c7;
+}
 .note_botton{
   text-align: center;
 }
