@@ -582,8 +582,13 @@ z-index: 400;
   /* gap: 1rem;  */
  
 }
-.chart-box img{
+.chart-box-1 img{
   width: 90%;
+  max-width: 500px;
+}
+.chart-box-2 img{
+  width: 90%;
+  max-width: 500px;
 }
 
 
